@@ -1,6 +1,6 @@
 # CST435—Parallel and Cloud Computing Assignment 2
 ## 📝 Project Overview
-This project implements a high-performance parallel image processing pipeline using the prnned Food-101 dataset, and using Python. The primary objective is to analyse the different parallel programming paradigms and evaluate their scalability, speedup, and efficiency when deployed on a Google Cloud Platform (GCP) environment.
+This project implements a high-performance parallel image processing pipeline using the trimmed Food-101 dataset, and using Python. The primary objective is to analyse the different parallel programming paradigms and evaluate their scalability, speedup, and efficiency when deployed on a Google Cloud Platform (GCP) environment.
 
 ## 🚀 Key Features & Filters
 The system utilises a  5-stage filtering pipeline for every image:
