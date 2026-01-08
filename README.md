@@ -22,6 +22,15 @@ The implementation tasks was carried out on GCP with the following specification
 | **Boot Disk** | 20 GB Balanced Persistent Disk   |
 | **Region/Zone** | ```asia-southeast-1``` (Singapore)  |
 
+## 🍔 Dataset Overview: Food-101
+1. **Data Characteristics**
+   - Total Classes: 101 categories (e.g., bibimbap, cup_cakes, donuts).
+     
+2. **Image Format:** High-resolution RGB images in `.jpg` format.
+   
+3. **Testing Subset:** For this assignment, we processed a manageable subset of 5,000 images (1 food file has 1000 images) across 5 specific classes to evaluate parallel performance. Therefore, the estimated size of the selected foods and their images are `~250mb`.
+   - Selected Food: `bibimbap, cup_cakes, donuts, dumplings, and edamame`
+  
 ## 🛠️ Installation & Setup
 1. **Clone and Navigate This Repository**
 ```
@@ -68,6 +77,17 @@ python3 main.py --mode future --workers 4 # For 4 Workers
 
 ## 📊 Performance Analysis & Scalability
 
+Formulae Used for Experiment are
+1. **Speedup** (ratio of serial execution time to parallel execution time)
+2. **Efficiency** (the fraction of time for which a processor is usefully employed)
+
+$$Speedup = \frac{T_{serial}}{T_{parallel}}$$
+
+
+$$Efficiency = \frac{Speedup}{P} \times 100\%$$
+
+Where $P$ is the number of workers ($1, 2, 4, 6, 8, 12$) used during our GCP testing.
+
 #### 📝 Results (`multiprocessing`)
 | Workers (P) | Multiprocessing Time (s) | Speedup | Efficiency|
 |------------|--------------------------|------------------|---------------------|
@@ -104,6 +124,6 @@ python3 main.py --mode future --workers 4 # For 4 Workers
 ```
 
 ## 🎥YouTube Demo Link:
-[Click Here](https://youtu.be/q1aiSGdztPE?si=Wd58DqU8Nsx0D88C)
+[Click Here](https://www.youtube.com/watch?v=8Ez1T6wbluo)
 
 
