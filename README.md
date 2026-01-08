@@ -1,4 +1,4 @@
-# CST435—Parallel and Cloud Computing Assignment
+# CST435—Parallel and Cloud Computing Assignment 2
 ## 📝 Project Overview
 This project implements a high-performance parallel image processing pipeline using the prnned Food-101 dataset, and using Python. The primary objective is to analyse the different parallel programming paradigms and evaluate their scalability, speedup, and efficiency when deployed on a Google Cloud Platform (GCP) environment.
 
@@ -25,17 +25,16 @@ The implementation tasks was carried out on GCP with the following specification
 ## 🛠️ Installation & Setup
 1. **Clone and Navigate This Repository**
 ```
-git clone <your-repo-link>
+git clone https://github.com/Anwar810/CST435-Assignment2.git
 cd <repo-folder>
 ```
 
 2. **Download the Food-101 Dataset, Extract All and Place the Extracted Folder Inside the Repository**
+   [Click Here](https://www.kaggle.com/datasets/dansbecker/food-101)
 
-[Click Here](https://www.kaggle.com/datasets/dansbecker/food-101)
+4. **Install Dependencies**
 
-3. **Install Dependencies**
-
-Required for OpenCV to function correctly on headless Linux servers:
+   Required for OpenCV to function correctly on headless Linux servers:
    
 ```
 sudo apt-get update && sudo apt-get install -y libgl1-mesa-glx
@@ -90,9 +89,9 @@ python3 main.py --mode future --workers 4 # For 4 Workers
 | 12          | 17.1753            | 3.41x             | 28.40%                |
 
 ## 🔍 Key Insights & Bottlenecks
-* Amdahl's Law: Our results confirm that speedup is limited by the sequential fraction ($f$), such as I/O operations and initial file scanning.
-* Synchronization: A `multiprocessing.Manager().Lock()` was implemented to ensure "proper synchronisation" of console output, preventing interleaved text from multiple processes.
-* Granularity: The system uses coarse-grained parallelism (processing one whole image per task) to ensure a high computation-to-communication ratio.
+* **Amdahl's Law:** Our results confirm that speedup is limited by the sequential fraction ($f$), such as I/O operations and initial file scanning.
+* **Synchronization:** A `multiprocessing.Manager().Lock()` was implemented to ensure "proper synchronisation" of console output, preventing interleaved text from multiple processes.
+* **Granularity:** The system uses coarse-grained parallelism (processing one whole image per task) to ensure a high computation-to-communication ratio.
 
 ## 📂 Repository Structure
 ```text
