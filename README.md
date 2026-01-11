@@ -57,7 +57,8 @@ python3 -m venv venv
 # Activate the environment
 source venv/bin/activate
 ```
-_Note: Once activated, your terminal prompt will be prefixed with `(venv)`, indicating that any libraries installed will be contained within this isolated environment._
+_Note: Once activated, the virtual machine terminal prompt will be prefixed with `(venv)`, indicating that any libraries installed will be contained within this isolated environment._
+
 5. **Install Python Libraries**
 
 ```
