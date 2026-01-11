@@ -41,7 +41,7 @@ cd <repo-folder>
 2. **Download the Food-101 Dataset, Extract All and Place the Extracted Folder Inside the Repository**
    [Click Here](https://www.kaggle.com/datasets/dansbecker/food-101)
 
-4. **Install Dependencies**
+3. **Install Dependencies**
 
    Required for OpenCV to function correctly on headless Linux servers:
    
@@ -49,13 +49,21 @@ cd <repo-folder>
 sudo apt-get update && sudo apt-get install -y libgl1-mesa-glx
 ```
 
-4. **Install Python Libraries**
+4. **Create and Activate Virtual Environment**
+```
+# Create the virtual environment named 'venv'
+python3 -m venv venv
+
+# Activate the environment
+source venv/bin/activate
+```
+_Note: Once activated, your terminal prompt will be prefixed with `(venv)`, indicating that any libraries installed will be contained within this isolated environment._
+5. **Install Python Libraries**
 
 ```
 pip3 install -r requirements.txt
 ```
 _Note: Dependencies include `numpy`, `opencv-python`, and `Pillow` for efficient matrix and image operations._
-
 
 ## ⚙️ Usage & Paradigms
 
